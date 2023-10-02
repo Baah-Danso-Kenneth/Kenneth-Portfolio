@@ -10,6 +10,7 @@ const theme: DefaultTheme = {
     textColor: '#1e1e28',
     baseTxtColor:'#5c5c6f',
     lightThemeBgColor:'#e0e0e6',
+    contentBgColor:'#f4f4f6',
 
   },
 

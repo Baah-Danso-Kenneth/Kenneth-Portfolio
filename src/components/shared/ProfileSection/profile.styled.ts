@@ -17,19 +17,10 @@ export const ProfilingSection=styled.div`
    background-color:${({theme})=>theme.colors.white};
    max-height:40vh;
    width:100%;
-
-
-   &::before{
-   content:"";
-   position:absolute;
-   bottom:0;
-   left:0;
-   width:100%;
-   height:5px;
-   background-color:#000;
-   box-shadow:0 2px 5px rgba(0, 0, 0, 0.3);
-   z-index:-1
-   }
+   position:relative;
+   padding-bottom:5px;
+   background-color:#fff;
+   box-shadow:0 2px 5px rgba(0, 0, 0, 0.2);
 }
 `;
 
@@ -41,6 +32,7 @@ export const ProfilingElement=styled.div`
     justify-content:center;
     align-items:center;
     margin-top:1.5rem;
+    
   >div{
     display:flex;
     >img{
@@ -98,16 +90,21 @@ export const  SkillSection=styled.div`
 
 @media ${device.lg}{
     height:52vh;
-    border:1px solid blue;
     overflow-y:auto;
+    background-color:${({theme})=>theme.colors.contentBgColor};
 }
+
 `;
 
 
 export const SocialSection=styled.div`
 width:100%;
 height:8vh;
-
+background-color:${({theme})=>theme.colors.white};
+   position:relative;
+   padding-top:5px;
+   background-color:#fff;
+   box-shadow:0 -2px 5px rgba(0, 0, 0, 0.2);
 >div{
     max-width:60%;
     height:8vh;

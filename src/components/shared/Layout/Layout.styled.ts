@@ -29,7 +29,7 @@ export const ProfileLayout=styled.div`
 @media ${device.xl}{}
 
 @media ${device.lg}{
-    border:1px solid red;
+    box-shadow:0 0 3px rgba(0, 0, 0, 0.2);
 }
 
 @media ${device.md}{}
@@ -41,7 +41,7 @@ export const SidebarLayout=styled.div`
 @media ${device.xl}{}
 
 @media ${device.lg}{
-    border:1px solid red;
+    box-shadow:0 0 3px rgba(0, 0, 0, 0.2);
 }
 
 @media ${device.md}{}
@@ -53,7 +53,11 @@ export const OutletLayout=styled.div`
 @media ${device.xl}{}
 
 @media ${device.lg}{
-    border:1px solid red;
+    border-left:none;
+    border-right:none;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 -1px 1px rgba(0, 0, 0, 0.2);
+
+
 }
 
 @media ${device.md}{}
