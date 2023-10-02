@@ -1,8 +1,8 @@
 import { styled } from "styled-components";
 import { device } from "../../../utils/BreakPoints";
 
-export const LayoutContainer=styled.div`
 
+export const LayoutContainer=styled.div`
 @media ${device.xl}{
   display:grid;
   grid-template-columns:25% 70% 5%;
@@ -54,10 +54,9 @@ export const OutletLayout=styled.div`
 
 @media ${device.lg}{
     border-left:none;
+    overflow-y:auto;
     border-right:none;
     box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 -1px 1px rgba(0, 0, 0, 0.2);
-
-
 }
 
 @media ${device.md}{}
