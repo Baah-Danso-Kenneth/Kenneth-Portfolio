@@ -2,8 +2,18 @@ import { ExperienceDisplayFlex, ExperienceSection, FooterSection,
   HeroSection, HeroSectionElement, HeroSectionImageDiv, HeroSectionInfomationContent, HeroSectionInformation, HomePageContainer,
    MainSection, RecommendationSection } from './HomePage.styled'
 import FaceImge from '../../assets/images/face-2.png';
+import ServiceCard from '../Cards/ServiceCard';
 
 function LandingPage() {
+
+    const Services=[
+        {name:'Web developement', message:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.' },
+        {name:'Backend development', message:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.'},
+        {name:'API Development', message:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.'},
+        {name:'Responsive design', message:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.'},
+        {name:'Hosting & Deploying ', message:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.'},
+        {name:'Soft-Skills', message:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.'}
+    ]
   return (
       <HomePageContainer>
 
@@ -48,11 +58,17 @@ function LandingPage() {
             <p>20 +</p>
            <p>Honours and awards</p>
           </ExperienceDisplayFlex>
-          
+
           </ExperienceSection>
 
         <MainSection>
-          mim
+          <h3>What i bring on the table</h3>
+           <div>
+            {Services.map(({name, message},index)=>(
+             <ServiceCard key={index} name={name} message={message} />
+            ))}
+             
+           </div>
           </MainSection>
 
         <RecommendationSection>

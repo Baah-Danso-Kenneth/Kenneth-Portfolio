@@ -122,6 +122,15 @@ export const ExperienceDisplayFlex=styled.div`
 export const MainSection= styled.div`
  border:1px solid purple;
  grid-area:3/1/span 1/-1;
+
+
+ >div{
+    max-width:100%;
+    margin:0 auto;
+    display:flex;
+    gap:2rem;
+    flex-flow:wrap;
+ }
 `;
 
 export const RecommendationSection=styled.div`

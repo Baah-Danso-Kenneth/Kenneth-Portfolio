@@ -1,11 +1,13 @@
 import React from 'react'
-import { ProfileContainer, ProfilingElement, ProfilingSection, ProflilingSkills, SkillSection, SocialSection } from './profile.styled'
+import { ProfileContainer, ProfilingElement, ProfilingSection, ProflilingSkills, SkillLanguageSection, SkillSection, SocialSection } from './profile.styled'
 import ProfilePicture from '../../../assets/images/face-1.jpg';
 import {AiFillLinkedin} from 'react-icons/ai'
 import {FaTiktok} from 'react-icons/fa'
 import {AiOutlineTwitter} from 'react-icons/ai';
 import {BsGithub} from 'react-icons/bs';
 import {FaDribbble} from 'react-icons/fa'
+import {SiJavascript} from 'react-icons/si'
+import {TbBrandPython} from 'react-icons/tb'
 
 function ProfileSection() {
   return (
@@ -28,14 +30,39 @@ function ProfileSection() {
         </ProfilingSection>
 
         <SkillSection>
-            <p>geee</p>
-            <p>gee</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, ratione dolorem! Perferendis adipisci dolorem, incidunt neque culpa eius ullam pariatur dolorum fugit? Blanditiis exercitationem, alias voluptatibus sint tenetur molestias, laborum libero nisi nobis possimus dolores aut sapiente voluptas 
-                sit ex quos ipsum doloribus voluptatem earum corporis quam!
-                 Ad eligendi nobis mollitia doloribus aliquam fugiat facilis odit dolorum. Natus, ab quae.</p>
+           <SkillLanguageSection>
+              <h3 className='language_h3'>Languages</h3>
+               <div className='python'>
+                <TbBrandPython/>
+                <p>Python</p>
+               </div>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatem, similique unde temporibus dignissimos enim veniam at nemo vel odit voluptate quos eos atque illum quibusdam molestiae obcaecati aperiam deserunt quidem ab sint voluptas. Saepe at hic, cumque laudantium nisi error delectus assumenda molestiae, iure vel distinctio quisquam dolore eius odio deserunt dolor. Odio temporibus alias quae provident perferendis aliquam!</p>
+              <div className='javascript'>
+                <SiJavascript/>
+                <p>JavaScript</p>
+               </div>
+            </SkillLanguageSection>
+            
+            <div>
+              <h3>FrameWorks</h3>
+              <div>
+                <h3>#</h3>
+                <p>React</p>
+              </div>
+
+              <div>
+                <h3>#</h3>
+                <p>Django</p>
+              </div>
+
+              <div>
+                <h3>#</h3>
+              </div>
+            </div>
+
+
         </SkillSection>
+
 
         <SocialSection>
           <div>

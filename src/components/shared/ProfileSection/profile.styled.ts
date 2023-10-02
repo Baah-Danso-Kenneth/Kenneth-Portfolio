@@ -96,6 +96,40 @@ export const  SkillSection=styled.div`
 
 `;
 
+export const SkillLanguageSection=styled.div`
+display:flex;
+flex-flow:column;
+justify-content:center;
+align-items:center;
+
+  .language_h3{
+    font-size:18px;
+  }
+  .python{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transform:translateY(-1.8rem);
+
+    >p{
+       transform:translateX(0.5rem);    
+    }
+  }
+
+.javascript{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transform:translate(0.8rem, -3.5rem);
+
+  >p{
+    transform:translateX(0.5rem); 
+    font-size:15px; 
+  }
+
+}
+`;
+
 
 export const SocialSection=styled.div`
 width:100%;
