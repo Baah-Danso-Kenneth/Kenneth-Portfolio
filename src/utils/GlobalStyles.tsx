@@ -17,6 +17,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding:0;
     overflow-x: hidden;
+    background-color:${({theme})=>theme.colors.lightThemeBgColor};
     min-height: 100vh;
     text-rendering: optimizeSpeed;
         font-family: ${({ theme }) => theme.fonts.JetBrainsFont}, ${({ theme }) => theme.fonts.ChilankaFont}, sans-serif;
