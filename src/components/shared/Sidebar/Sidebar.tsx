@@ -1,21 +1,24 @@
-import { useState } from 'react';
 import { MenuBarSection, SidebarContainer, SidebarElments } from './Sidebar.styled'
 import {BsFillMenuButtonWideFill} from 'react-icons/bs';
 import {GrClose} from 'react-icons/gr'
 import {motion} from 'framer-motion';
+import { useAppDispatch, useAppSelector } from '../../../store/store';
+import { toggleState } from '../../../store/features/sidebarSlice';
 
 function Sidebar() {
-    const [isOpen, setOpen]=useState(false)
+   const {isOpen} = useAppSelector((state)=>state.siderbar) 
+   const dispatch = useAppDispatch()
 
-    const toggleMenu=()=>{
-        setOpen(!isOpen)
-    }
+   const handleToggle=()=>{
+     dispatch(toggleState())
+   } 
+
   return (
     <SidebarContainer>
 
         <MenuBarSection>
         <motion.div
-          onClick={toggleMenu}
+          onClick={handleToggle}
           whileTap={{ scale: 0.9, rotate: isOpen ? 0 : 180 }}
         >
           {isOpen ? <GrClose /> : <BsFillMenuButtonWideFill />}
