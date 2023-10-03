@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { device } from "../../../utils/BreakPoints";
+import { ToggleProps } from "./types";
 
 
 export const SidebarContainer=styled.div`

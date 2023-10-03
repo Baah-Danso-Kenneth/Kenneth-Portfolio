@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import { device } from "../../utils/BreakPoints";
-import BannerImage from '../../assets/images/kente_pattern.jpg'
+import BannerImage from '../../assets/images/kente_pattern.png'
 
 export const HomePageContainer=styled.div`
   display:grid;

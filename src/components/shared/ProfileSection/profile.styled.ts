@@ -63,7 +63,9 @@ export const ProfilingElement=styled.div`
 
 export const ProflilingSkills=styled.div`
      display:flex;
+     font-family:${({theme})=>theme.fonts.ChilankaFont};
      flex-direction:column;
+     text-transform:uppercase;
      justify-content:center;
      align-items:center;
      height:60px;
@@ -87,54 +89,90 @@ export const ProflilingSkills=styled.div`
 `;
 
 export const  SkillSection=styled.div`
+ @media ${device.lg}{
+  height:52vh;
+  overflow-y:auto;
 
-@media ${device.lg}{
-    height:52vh;
-    overflow-y:auto;
-    background-color:${({theme})=>theme.colors.contentBgColor};
-}
 
-`;
-
-export const SkillLanguageSection=styled.div`
-display:flex;
-flex-flow:column;
-justify-content:center;
-align-items:center;
-
-  .language_h3{
-    font-size:18px;
+  .cv_section{
+    max-width:80%;
+    margin:0 auto;
   }
-  .python{
+
+  .cv_content{
     display:flex;
     align-items:center;
-    justify-content:center;
-    transform:translateY(-1.8rem);
-
+    gap:1rem;
     >p{
-       transform:translateX(0.5rem);    
+      font-size:15px;
+    }
+  }
+ }
+`;
+
+export const ResidenceContainer=styled.div`
+  max-width:80%;
+  margin:0 auto;
+  font-size:14px;
+
+  >div{
+    margin-bottom:0;
+  }
+
+  .residence{
+     display:flex;
+     justify-content:space-between;
+    >p{
+      margin-bottom:0;
+    }
+    }
+
+   .city{
+    display:flex;
+    justify-content:space-between;
+   }
+  .age{
+    display:flex;
+    justify-content:space-between;
+    transform:translateY(-0.5rem);
+
+  } 
+
+  border-bottom:1px solid #ccc;
+`;
+
+export const SkillsZone=styled.div`
+ @media ${device.lg}{
+  >h3{
+    text-align:center;
+  }
+  max-width:80%;
+  margin:0 auto;
+
+  .images_layout{
+    display:flex;
+    gap:1.2rem;
+    flex-flow:wrap;
+    border-bottom:1px solid #ccc;
+  }
+  .images_div{
+    >img{
+      width:2rem;
     }
   }
 
-.javascript{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  transform:translate(0.8rem, -3.5rem);
 
-  >p{
-    transform:translateX(0.5rem); 
-    font-size:15px; 
-  }
+ }
 
-}
 `;
+
+export const SkillLanguageSection=styled.div``;
 
 
 export const SocialSection=styled.div`
 width:100%;
 height:8vh;
-background-color:${({theme})=>theme.colors.white};
+  background-color:${({theme})=>theme.colors.white};
    position:relative;
    padding-top:5px;
    background-color:#fff;
