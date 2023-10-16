@@ -158,6 +158,7 @@ export const SkillsZone=styled.div`
   .images_div{
     >img{
       width:2rem;
+      object-fit:cover;
     }
   }
 

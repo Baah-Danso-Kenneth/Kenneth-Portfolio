@@ -1,18 +1,30 @@
 import { styled } from "styled-components";
 import { device } from "../../../utils/BreakPoints";
 
+interface LayoutContainerProps{
+  isOpen:boolean;
+}
 
-export const LayoutContainer=styled.div`
-@media ${device.xl}{
+const dynamicLayoutStyles=(isOpen:boolean)=>{
+  return `
+      --sidebar-width:${isOpen ? "20%" : "5%"};
+      --main-content-width:${isOpen ? '60%': '70%'}
+  `;
+}
+
+export const LayoutContainer=styled.div<LayoutContainerProps>`
+
+${(props)=>dynamicLayoutStyles(props.isOpen)};
   display:grid;
   grid-template-columns:25% 70% 5%;
   grid-template-rows:30vh;
+
+@media ${device.xl}{
+
 }
 
 @media ${device.lg}{
   padding:1rem;
-  display:grid;
-  grid-template-columns:20% 75% 5%;
   grid-template-rows:93vh;
 }
 

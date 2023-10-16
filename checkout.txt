@@ -1,0 +1,103 @@
+i
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+mport styled from "styled-components";
+imprt { useSelector } from "react-redux";
+
+const dynamicLayoutStyles = (isOpen) => {
+  return `
+    --sidebar-width: ${isOpen ? "25%" : "5%"};
+    --main-content-width: ${isOpen ? "70%" : "75%"};
+  `;
+};
+
+export const LayoutContainer = styled.div`
+  ${(props) => dynamicLayoutStyles(props.isOpen)}
+
+  @media ${device.xl} {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) var(--main-content-width) 5%;
+    grid-template-rows: 30vh;
+  }
+
+  @media ${device.lg} {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: var(--sidebar-width) var(--main-content-width) 5%;
+    grid-template-rows: 93vh;
+  }
+
+  /* Add media queries for other screen sizes if needed */
+`;
+o

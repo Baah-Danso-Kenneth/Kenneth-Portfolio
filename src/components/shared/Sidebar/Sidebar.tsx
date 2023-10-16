@@ -1,9 +1,10 @@
-import { MenuBarSection, SidebarContainer, SidebarElments } from './Sidebar.styled'
+import { MenuBarSection, SidebarContainer, SidebarElments, SidebarLinks } from './Sidebar.styled'
 import {BsFillMenuButtonWideFill} from 'react-icons/bs';
 import {GrClose} from 'react-icons/gr'
 import {motion} from 'framer-motion';
 import { useAppDispatch, useAppSelector } from '../../../store/store';
 import { toggleState } from '../../../store/features/sidebarSlice';
+import { Link } from 'react-router-dom';
 
 function Sidebar() {
    const {isOpen} = useAppSelector((state)=>state.siderbar) 
@@ -14,14 +15,14 @@ function Sidebar() {
    } 
 
   return (
-    <SidebarContainer>
+    <SidebarContainer isOpen={isOpen}>
 
         <MenuBarSection>
         <motion.div
           onClick={handleToggle}
           whileTap={{ scale: 0.9, rotate: isOpen ? 0 : 180 }}
         >
-          {isOpen ? <GrClose /> : <BsFillMenuButtonWideFill />}
+          {isOpen ? <GrClose /> : <BsFillMenuButtonWideFill/>}
         </motion.div>
       </MenuBarSection>
 
@@ -29,12 +30,12 @@ function Sidebar() {
           {isOpen ?
           (
           <div>
-            <ul>
-              <li>Home</li>
-              <li>Contacts</li>
-              <li>Portfolio</li>
-              <li>History</li>
-            </ul>
+            <SidebarLinks>
+              <Link to="/">Home</Link>
+              <Link to="/contact">Contacts</Link>
+              <Link to='/portfolio'>Portfolio</Link>
+              <Link to="/history">History</Link>
+            </SidebarLinks>
           </div>
           ): null
         }

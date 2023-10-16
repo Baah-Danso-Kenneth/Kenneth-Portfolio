@@ -1,9 +1,11 @@
 import { styled } from "styled-components";
 import { device } from "../../../utils/BreakPoints";
-import { ToggleProps } from "./types";
 
 
-export const SidebarContainer=styled.div`
+interface sidebarProps{
+  isOpen:boolean
+}
+export const SidebarContainer=styled.div<sidebarProps>`
    min-height:93vh;
    display:flex;
    flex-direction:column;
@@ -21,6 +23,12 @@ export const MenuBarSection=styled.div`
     padding-bottom:2px;
     box-shadow:0 2px 5px rgba(0,0,0,0.2);
 
+    .icon{
+
+      color:red;
+      background-color:red;
+    }
+
   }
 `;
 
@@ -28,3 +36,9 @@ export const SidebarElments=styled.div`
 min-height:83vh;
 width:100%;
 `;
+
+export const SidebarLinks=styled.ul`
+ display:flex;
+ flex-flow:column;
+ align-items:center;
+`
