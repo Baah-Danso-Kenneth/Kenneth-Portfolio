@@ -3,6 +3,8 @@ import { ExperienceDisplayFlex, ExperienceSection, FooterSection,
    MainSection, RecommendationSection } from './HomePage.styled'
 import FaceImge from '../../assets/images/face-2.png';
 import ServiceCard from '../Cards/ServiceCard';
+import RecommendationCard from '../Cards/RecommendationCard';
+import Peeps from '../../assets/images/face-1.jpg';
 
 function LandingPage() {
 
@@ -14,6 +16,14 @@ function LandingPage() {
         {name:'Hosting & Deploying ', message:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.'},
         {name:'Soft-Skills', message:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.'}
     ]
+
+    const recommendations=[
+      {name:'Ike Sam', occupation:'Accountant', words:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.', src:Peeps},
+      {name:'Ike Sam', occupation:'Accountant', words:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.',src:Peeps},
+      {name:'Ike Sam', occupation:'Accountant', words:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.', src:Peeps},
+      {name:'Ike Sam', occupation:'Accountant', words:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.', src:Peeps} 
+    ]
+
   return (
       <HomePageContainer>
 
@@ -72,7 +82,13 @@ function LandingPage() {
           </MainSection>
 
         <RecommendationSection>
-          recc
+          {
+            recommendations.map(({name,words, occupation,src},index)=>(
+              <RecommendationCard key={index} 
+              name={name} words={words} 
+              occupation={occupation} src={src}/>
+            ))
+          }  
           </RecommendationSection>
 
         <FooterSection>
